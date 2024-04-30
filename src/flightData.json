@@ -1,0 +1,243 @@
+[
+    {
+      "price": 300,
+      "airlineLogo": "../assets/logo.svg",
+      "origin": "LHR",
+      "destination": "DXB",
+      "departureTime": "10:00",
+      "arrivalTime": "6:00",
+      "flightDuration": "2019-03-31T08:15:00.000Z",
+      "layovers": ["JFK"],
+      "layoverCount": 1,
+      "returnRoute": {
+        "origin": "DXB",
+        "destination": "LHR",
+        "departureTime": "8:00",
+        "arrivalTime": "12:00",
+        "flightDuration": "2019-03-31T08:30:00.000Z",
+        "layovers": ["AMS"],
+        "layoverCount": 1
+      }
+    },
+    {
+      "price": 350,
+      "airlineLogo": "path/to/airline_logo2.png",
+      "origin": "LHR",
+      "destination": "DXB",
+      "departureTime": "12:00",
+      "arrivalTime": "9:00",
+      "flightDuration": "2019-03-31T09:36:00.000Z",
+      "layovers": ["CDG", "AMS"],
+      "layoverCount": 2,
+      "returnRoute": {
+        "origin": "DXB",
+        "destination": "LHR",
+        "departureTime": "11:00",
+        "arrivalTime": "15:00",
+        "flightDuration": "2019-03-31T09:25:00.000Z",
+        "layovers": ["JFK", "CDG"],
+        "layoverCount": 2
+      }
+    },
+    {
+      "price": 320,
+      "airlineLogo": "path/to/airline_logo3.png",
+      "origin": "LHR",
+      "destination": "DXB",
+      "departureTime": "3:00",
+      "arrivalTime": "11:00",
+      "flightDuration": "2019-03-31T08:25:00.000Z",
+      "layovers": [],
+      "layoverCount": 0,
+      "returnRoute": {
+        "origin": "DXB",
+        "destination": "LHR",
+        "departureTime": "7:00",
+        "arrivalTime": "11:00",
+        "flightDuration": "2019-03-31T08:30:00.000Z",
+        "layovers": [],
+        "layoverCount": 0
+      }
+    },
+    {
+      "price": 400,
+      "airlineLogo": "path/to/airline_logo4.png",
+      "origin": "LHR",
+      "destination": "DXB",
+      "departureTime": "14:00",
+      "arrivalTime": "10:00",
+      "flightDuration": "2019-03-31T07:45:00.000Z",
+      "layovers": ["AMS"],
+      "layoverCount": 1,
+      "returnRoute": {
+        "origin": "DXB",
+        "destination": "LHR",
+        "departureTime": "12:00",
+        "arrivalTime": "16:00",
+        "flightDuration": "2019-03-31T08:20:00.000Z",
+        "layovers": ["CDG"],
+        "layoverCount": 1
+      }
+    },
+    {
+      "price": 420,
+      "airlineLogo": "path/to/airline_logo5.png",
+      "origin": "LHR",
+      "destination": "DXB",
+      "departureTime": "16:00",
+      "arrivalTime": "12:00",
+      "flightDuration": "2019-03-31T08:10:00.000Z",
+      "layovers": ["JFK", "CDG"],
+      "layoverCount": 2,
+      "returnRoute": {
+        "origin": "DXB",
+        "destination": "LHR",
+        "departureTime": "14:00",
+        "arrivalTime": "18:00",
+        "flightDuration": "2019-03-31T07:50:00.000Z",
+        "layovers": ["AMS", "JFK"],
+        "layoverCount": 2
+      }
+    },
+    {
+      "price": 380,
+      "airlineLogo": "path/to/airline_logo6.png",
+      "origin": "LHR",
+      "destination": "DXB",
+      "departureTime": "18:00",
+      "arrivalTime": "14:00",
+      "flightDuration": "2019-03-31T08:20:00.000Z",
+      "layovers": ["AMS"],
+      "layoverCount": 1,
+      "returnRoute": {
+        "origin": "DXB",
+        "destination": "LHR",
+        "departureTime": "16:00",
+        "arrivalTime": "20:00",
+        "flightDuration": "2019-03-31T08:30:00.000Z",
+        "layovers": ["CDG"],
+        "layoverCount": 1
+      }
+    },
+    {
+      "price": 450,
+      "airlineLogo": "path/to/airline_logo7.png",
+      "origin": "LHR",
+      "destination": "DXB",
+      "departureTime": "20:00",
+      "arrivalTime": "16:00",
+      "flightDuration": "2019-03-31T07:55:00.000Z",
+      "layovers": ["JFK"],
+      "layoverCount": 1,
+      "returnRoute": {
+        "origin": "DXB",
+        "destination": "LHR",
+        "departureTime": "18:00",
+        "arrivalTime": "22:00",
+        "flightDuration": "2019-03-31T08:15:00.000Z",
+        "layovers": ["JFK"],
+        "layoverCount": 1
+      }
+    },
+    {
+      "price": 390,
+      "airlineLogo": "path/to/airline_logo8.png",
+      "origin": "LHR",
+      "destination": "DXB",
+      "departureTime": "22:00",
+      "arrivalTime": "18:00",
+      "flightDuration": "2019-03-31T08:40:00.000Z",
+      "layovers": ["CDG", "AMS"],
+      "layoverCount": 2,
+      "returnRoute": {
+        "origin": "DXB",
+        "destination": "LHR",
+        "departureTime": "20:00",
+        "arrivalTime": "00:00",
+        "flightDuration": "2019-03-31T08:20:00.000Z",
+        "layovers": ["AMS","CDG"],
+        "layoverCount": 2
+      }
+    },
+    {
+      "price": 410,
+      "airlineLogo": "path/to/airline_logo9.png",
+      "origin": "LHR",
+      "destination": "DXB",
+      "departureTime": "6:00",
+      "arrivalTime": "2:00",
+      "flightDuration": "2019-03-31T09:20:00.000Z",
+      "layovers": ["JFK", "AMS"],
+      "layoverCount": 2,
+      "returnRoute": {
+        "origin": "DXB",
+        "destination": "LHR",
+        "departureTime": "4:00",
+        "arrivalTime": "8:00",
+        "flightDuration": "2019-03-31T08:45:00.000Z",
+        "layovers": ["JFK", "CDG"],
+        "layoverCount": 2
+      }
+    },
+    {
+      "price": 430,
+      "airlineLogo": "path/to/airline_logo10.png",
+      "origin": "LHR",
+      "destination": "DXB",
+      "departureTime": "8:00",
+      "arrivalTime": "4:00",
+      "flightDuration": "2019-03-31T08:30:00.000Z",
+      "layovers": ["CDG"],
+      "layoverCount": 1,
+      "returnRoute": {
+        "origin": "DXB",
+        "destination": "LHR",
+        "departureTime": "6:00",
+        "arrivalTime": "10:00",
+        "flightDuration": "2019-03-31T09:10:00.000Z",
+        "layovers": [ "JFK"],
+        "layoverCount": 1
+      }
+    },
+    {
+      "price": 470,
+      "airlineLogo": "path/to/airline_logo11.png",
+      "origin": "LHR",
+      "destination": "DXB",
+      "departureTime": "10:00",
+      "arrivalTime": "6:00",
+      "flightDuration": "2019-03-31T09:05:00.000Z",
+      "layovers": ["JFK", "CDG"],
+      "layoverCount": 2,
+      "returnRoute": {
+        "origin": "DXB",
+        "destination": "LHR",
+        "departureTime": "8:00",
+        "arrivalTime": "12:00",
+        "flightDuration": "2019-03-31T08:50:00.000Z",
+        "layovers": ["JFK", "AMS"],
+        "layoverCount": 2
+      }
+    },
+    {
+      "price": 440,
+      "airlineLogo": "path/to/airline_logo12.png",
+      "origin": "LHR",
+      "destination": "DXB",
+      "departureTime": "12:00",
+      "arrivalTime": "8:00",
+      "flightDuration": "2019-03-31T08:55:00.000Z",
+      "layovers": ["AMS","JFK","CDG"],
+      "layoverCount": 3,
+      "returnRoute": {
+        "origin": "DXB",
+        "destination": "LHR",
+        "departureTime": "10:00",
+        "arrivalTime": "14:00",
+        "flightDuration": "2019-03-31T08:40:00.000Z",
+        "layovers": ["CDG", "JFK","AMS"],
+        "layoverCount": 3
+      }
+    }
+  ]
+  

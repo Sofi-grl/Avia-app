@@ -1,0 +1,92 @@
+.wrapper {
+  position: absolute;
+  top: 228px;
+  left: 355px;
+  width: 502px;
+  }
+  .flightOption{
+    width: 502px;
+    height: 184px;
+    background-color: #ffff;
+    border-radius: 5px;
+    box-shadow: 0px 2px 8px 0px #0000001A;
+    margin-bottom: 23px;
+  }
+  .flightInfo {
+    display: flex;
+    flex-direction: column;
+    width: 457px;
+    height: 41px;
+    margin-left: 22px;
+  }
+  
+  .logoAndPrice {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+  }
+  
+  .price {
+    color: #2196F3;
+    font-family: "Open Sans";
+    font-weight: 600;
+    font-size: 24px;
+  }
+  
+  .flightDetails {
+    display: flex;
+    flex-direction: row;
+    width: 462px;
+    
+    
+    .details{
+      display: inline-block;
+      
+      height: 39px;
+      margin-bottom: 10px;
+      
+    }
+
+    .details:nth-last-child(2){
+      margin-right: 70px; 
+      width: 85px;
+    }
+    .details:nth-last-child(3) {
+      margin-right: 75px; 
+      width: 85px;
+      
+    }
+    
+  }
+  
+  .label {
+    font-family: "Open Sans";
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    color: #A0B0B9;
+    line-height: 18px;
+    text-transform: uppercase;
+  }
+  .value{
+    font-family: "Open Sans";
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    color: #4A4A4A;
+    line-height: 21px;
+  }
+  .showMore{
+    width: 502px;
+    height: 50px;
+    background-color: #2196F3;
+    border-radius: 5px;
+    color: #ffff;
+    font-size: 12px;
+    font-weight: 600;
+    font-family: "Open Sans";
+    text-transform: uppercase;
+    border: none;
+  }
