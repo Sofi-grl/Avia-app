@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Routes, Route } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import Layout from './components/Layout';
 
 function App() {
@@ -7,6 +7,7 @@ function App() {
     <Routes>
     <Route path="/" element={<Layout />} />
   </Routes>
+  
   );
 }
 
