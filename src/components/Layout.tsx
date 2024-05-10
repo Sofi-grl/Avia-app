@@ -1,6 +1,4 @@
 
-import React from 'react';
-import { Link } from 'react-router-dom';
 import "../styles/app.scss";
 import Filter from "./Filter";
 import logo from "../assets/logo.svg";
@@ -9,13 +7,15 @@ import FlightOptions from './FlightOptions';
 
 function Layout() {
   return (
-    <div>
-      <Link to="/" className='logo-link'> 
-        <img src={logo} className='logo' alt="logo" />
-      </Link>
-      <Filter />
-      <SortButtons />
-      <FlightOptions />
+    <div className='container'>
+    <a href="/"><img src={logo} className='logo' alt="logo" /></a>
+      <div className='content-wrapper'>
+        <Filter />
+        <div>
+          <SortButtons />
+          <FlightOptions />
+        </div>
+      </div>
     </div>
   );
 }

@@ -37,12 +37,19 @@ const flightDataSlice = createSlice({
       state.sort((a, b) => a.price - b.price);
     },
     sortFlightsByFastest: (state) => {
+      const calculateTotalFlightDuration = (flight: FlightOption): number => {
+        const outboundDuration = calculateFlightDurationInMinutes(flight.flightDuration);
+        const returnDuration = calculateFlightDurationInMinutes(flight.returnRoute.flightDuration);
+        return outboundDuration + returnDuration;
+      };
       state.sort((a, b) => {
-        const durationA = calculateFlightDurationInMinutes(a.flightDuration);
-        const durationB = calculateFlightDurationInMinutes(b.flightDuration);
+        const durationA = calculateTotalFlightDuration(a);
+        const durationB = calculateTotalFlightDuration(b);
+        console.log(durationA - durationB);
         return durationA - durationB;
       });
     },
+    
     sortFlightsByOptimal: (state) => {
       state.sort((a, b) => {
         const durationComparison = calculateFlightDurationInMinutes(a.flightDuration) - calculateFlightDurationInMinutes(b.flightDuration);
@@ -59,26 +66,31 @@ const flightDataSlice = createSlice({
       });
     },
     filterFlightsByLayovers: (state, action: PayloadAction<string[]>) => {
-        const selectedFilters = action.payload;
-        if (selectedFilters.includes('всі')) {
-          return initialState; 
-        } else {
-          let filteredFlights = initialState; 
-          if (selectedFilters.includes('без пересадок')) {
-            filteredFlights = filteredFlights.filter((flight) => flight.layoverCount === 0);
-          }
-          if (selectedFilters.includes('1 пересадка')) {
-            filteredFlights = filteredFlights.filter((flight) => flight.layoverCount === 1);
-          }
-          if (selectedFilters.includes('2 пересадки')) {
-            filteredFlights = filteredFlights.filter((flight) => flight.layoverCount === 2);
-          }
-          if (selectedFilters.includes('3 пересадки')) {
-            filteredFlights = filteredFlights.filter((flight) => flight.layoverCount === 3);
-          }
-          return filteredFlights;
+      const selectedFilters = action.payload;
+    
+      if (selectedFilters.length === 0 || selectedFilters.includes('всі')) {
+        return initialState;
+      }
+    
+      const filteredFlights = initialState.filter(flight => {
+        if (selectedFilters.includes('без пересадок') && flight.layoverCount === 0) {
+          return true;
         }
-      },
+        if (selectedFilters.includes('1 пересадка') && flight.layoverCount === 1) {
+          return true;
+        }
+        if (selectedFilters.includes('2 пересадки') && flight.layoverCount === 2) {
+          return true;
+        }
+        if (selectedFilters.includes('3 пересадки') && flight.layoverCount === 3) {
+          return true;
+        }
+        return false;
+      });
+    
+      return filteredFlights;
+    },
+    
       
       
       

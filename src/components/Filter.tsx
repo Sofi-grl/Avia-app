@@ -1,9 +1,7 @@
 import React, { useState } from 'react';
-import s from "../styles/filter.module.scss";
+import  s from "../styles/filter.module.scss";
 import { useDispatch } from 'react-redux';
 import { filterFlightsByLayovers } from '../flightDataSlice';
-
-
 
 interface CheckboxOption {
   label: string;
@@ -24,36 +22,48 @@ const Filter = () => {
 
   const handleCheckboxChange = (event: React.ChangeEvent<HTMLInputElement>, value: string) => {
     const { checked } = event.target;
-
-    let updatedFilters: string[] = [];
-
+  
+    let updatedFilters: string[] = [...selectedFilters];
+  
     if (value === "всі") {
-      updatedFilters = checked ? checkboxOptions.map(option => option.value) : [];
-    } else {
       if (checked) {
-        updatedFilters = [value];
+        updatedFilters = checkboxOptions.map(option => option.value);
       } else {
         updatedFilters = [];
       }
+    } else {
+      if (checked) {
+        updatedFilters.push(value);
+      } else {
+        updatedFilters = updatedFilters.filter(item => item !== value);
+      }
+  
+      const allOthersChecked = checkboxOptions.slice(1).every(option => updatedFilters.includes(option.value));
+      if (allOthersChecked && !updatedFilters.includes("всі")) {
+        updatedFilters.push("всі");
+      } else {
+        updatedFilters = updatedFilters.filter(item => item !== "всі");
+      }
     }
-
+  
     setSelectedFilters(updatedFilters);
     dispatch(filterFlightsByLayovers(updatedFilters));
   };
+  
 
   return (
-    <div className={s.wrapper}>
+    <div className={s['wrapper']}>
       <h3>Кількість пересадок</h3>
       {checkboxOptions.map((option) => (
-        <label key={option.value} className={s.checkboxLabel}>
+        <label key={option.value} className={s['checkbox-label']}>
           <input
             type="checkbox"
             value={option.value}
             checked={selectedFilters.includes(option.value)}
             onChange={(e) => handleCheckboxChange(e, option.value)}
-            className={s.checkboxInput}
+            className={s['checkbox-input']}
           />
-          <span className={s.customCheckbox}></span>
+          <span className={s['custom-checkbox']}></span>
           {option.label}
         </label>
       ))}

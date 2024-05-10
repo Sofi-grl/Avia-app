@@ -48,10 +48,10 @@ const FlightOptions: React.FC = () => {
   return (
     <div className={s.wrapper}>
       {flightData.slice(0, visibleOptions).map((option: FlightOption, index: number) => (
-        <div key={index} className={s.flightOption}>
-          <div className={s.flightInfo}>
-            <div className={s.logoAndPrice}>
-              <span className={s.price}>{option.price}</span>
+        <div key={index} className={s['flight-option']}>
+          <div className={s['flight-info']}>
+            <div className={s['logo-and-price']}>
+              <span className={s['price']}>{option.price} $</span>
               <img src={img} alt="Airline Logo" />
             </div>
             <FlightRouteDetails route={option} />
@@ -60,7 +60,7 @@ const FlightOptions: React.FC = () => {
         </div>
       ))}
       {totalOptions > visibleOptions && (
-        <button className={s.showMore} onClick={handleShowMore}>
+        <button className={s['show-more']} onClick={handleShowMore}>
           Показати ще {Math.min(5, totalOptions - visibleOptions)} квитків
         </button>
       )}
@@ -78,21 +78,21 @@ const FlightRouteDetails: React.FC<FlightRouteDetailsProps> = ({ route }) => {
     const hours = durationDate.getUTCHours();
     const minutes = durationDate.getUTCMinutes();
   
-    return `${hours} гд ${minutes} хв`;
+    return  `${hours}г ${minutes}хв`;
   };
 
   return (
-    <div className={s.flightDetails}>
-      <div className={s.details}>
-        <div className={s.label}>{route.origin} - {route.destination}</div>
-        <div className={s.value}>{route.departureTime} - {route.arrivalTime}</div>
+    <div className={s['flight-details']}>
+      <div className={s['details']}>
+        <div className={s['label']}>{route.origin} - {route.destination}</div>
+        <div className={s['value']} style={{textTransform:'lowercase',fontSize:'14px',fontWeight:'600'}}>{route.departureTime} - {route.arrivalTime}</div>
       </div>
-      <div className={s.details}>
-        <div className={s.label}>В дорозі</div>
-        <div className={s.value}>{calculateDuration(route.flightDuration)}</div>
+      <div className={s['details']}>
+        <div className={s['label']}>В дорозі</div>
+        <div className={s['value']} style={{textTransform:'lowercase',fontSize:'14px',fontWeight:'600'}}>{calculateDuration(route.flightDuration)}</div>
       </div>
-      <div className={s.details}>
-        <div className={s.label}>
+      <div className={s['details']}>
+        <div className={s['label']}>
           {route.layoverCount === 0
             ? "Без пересадок"
             : route.layoverCount === 1
@@ -101,7 +101,7 @@ const FlightRouteDetails: React.FC<FlightRouteDetailsProps> = ({ route }) => {
           }
         </div>
         {route.layovers.map((layover, layoverIndex) => (
-          <span className={s.value} key={layoverIndex} >
+          <span className={s['value']} key={layoverIndex} >
             {layoverIndex > 0 && ', '}
             {layover}
           </span>

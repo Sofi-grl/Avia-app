@@ -1,92 +1,92 @@
+$wrapper-width: 502px;
+$box-shadow-color: #0000001A;
+$primary-color: #2196F3;
+$secondary-color: #4A4A4A;
+$tertiary-color: #A0B0B9;
+$background-color: #ffff;
+
 .wrapper {
-  position: absolute;
-  top: 228px;
-  left: 355px;
-  width: 502px;
-  }
-  .flightOption{
-    width: 502px;
+  width: $wrapper-width;
+
+  .flight-option {
     height: 184px;
-    background-color: #ffff;
+    background-color: $background-color;
     border-radius: 5px;
-    box-shadow: 0px 2px 8px 0px #0000001A;
+    box-shadow: 0 2px 8px 0 $box-shadow-color;
     margin-bottom: 23px;
   }
-  .flightInfo {
+
+  .flight-info {
     display: flex;
     flex-direction: column;
     width: 457px;
     height: 41px;
     margin-left: 22px;
   }
-  
-  .logoAndPrice {
+
+  .logo-and-price {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     margin-top: 10px;
   }
-  
+
   .price {
-    color: #2196F3;
+    color: $primary-color;
     font-family: "Open Sans";
     font-weight: 600;
     font-size: 24px;
   }
-  
-  .flightDetails {
+
+  .flight-details {
     display: flex;
     flex-direction: row;
     width: 462px;
-    
-    
-    .details{
+
+    .details {
       display: inline-block;
-      
       height: 39px;
       margin-bottom: 10px;
-      
-    }
 
-    .details:nth-last-child(2){
-      margin-right: 70px; 
-      width: 85px;
+      &:nth-last-child(2) {
+        margin-right: 70px;
+        width: 85px;
+      }
+
+      &:nth-last-child(3) {
+        margin-right: 75px;
+        width: 85px;
+      }
     }
-    .details:nth-last-child(3) {
-      margin-right: 75px; 
-      width: 85px;
-      
-    }
-    
   }
-  
-  .label {
+
+  .label, .value {
     font-family: "Open Sans";
     font-size: 12px;
     font-weight: 600;
-    letter-spacing: 0.5px;
-    color: #A0B0B9;
     line-height: 18px;
     text-transform: uppercase;
   }
-  .value{
-    font-family: "Open Sans";
-    font-size: 12px;
-    font-weight: 600;
+
+  .label {
+    letter-spacing: 1px;
+    color: $tertiary-color;
+  }
+
+  .value {
     letter-spacing: 0.5px;
-    color: #4A4A4A;
+    color: $secondary-color;
     line-height: 21px;
   }
-  .showMore{
-    width: 502px;
+
+  .show-more {
     height: 50px;
-    background-color: #2196F3;
-    border-radius: 5px;
-    color: #ffff;
+    background-color: $primary-color;
+    color: $background-color;
     font-size: 12px;
     font-weight: 600;
-    font-family: "Open Sans";
     text-transform: uppercase;
     border: none;
   }
+}

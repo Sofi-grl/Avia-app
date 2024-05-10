@@ -1,51 +1,50 @@
-.wrapper{
+$button-background-default: #fff;
+$button-background-active: #2196F3;
+$button-border-default: #DFE5EC;
+$button-border-active: #2196F3;
+$button-text-default: #4A4A4A;
+$button-text-active: #fff;
+
+.wrapper {
   width: 502px;
   height: 50px;
-  position: absolute;
-  top: 160px;
-  left: 355px;
+  margin-bottom: 20px;
   border-radius: 5px;
   display: flex;
   flex-direction: row;
   font-family: "Open Sans";
-  font-size: 12px;
-  font-weight: 600;
   letter-spacing: 0.5px;
   text-align: center;
   
-
-  .sortButton {
+  .sort-button {
     width: 168px;
     height: 50px;
-    background-color: #ffffff; 
-    color: #4A4A4A; 
-    border: 1px solid #DFE5EC;
+    font-size: 12px;
+    font-weight: 600;
+    background-color: $button-background-default; 
+    color: $button-text-default; 
+    border: 1px solid $button-border-default;
     cursor: pointer;
     text-transform: uppercase;
     transition: background-color 0.3s ease; 
-  }
+
+    &:first-child {
+      border-top-left-radius: 5px; 
+      border-bottom-left-radius: 5px;
+    }
   
-  .sortButton:hover,
-  .sortButton:focus {
-    background-color: #2196F3; 
-    color: #ffffff;
-    border: #2196F3;
-  }
-  
-  .sortButton:active {
-    background-color: #2196F3; 
-    color: #ffffff;
-    border: #2196F3;
-  }
-  .sortButton:first-child {
-    border-top-left-radius: 5px; 
-    border-bottom-left-radius: 5px;
-  }
-  
-  .sortButton:last-child {
-    border-top-right-radius: 5px; 
-    border-bottom-right-radius: 5px;
+    &:last-child {
+      border-top-right-radius: 5px; 
+      border-bottom-right-radius: 5px;
+    }
+
+    &.active,
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: $button-background-active; 
+      color: $button-text-active;
+      border: $button-border-active;
+    }
   }
 }
-
-  
