@@ -82,11 +82,14 @@ $background-color: #ffff;
 
   .show-more {
     height: 50px;
+    width: 502px;
     background-color: $primary-color;
     color: $background-color;
     font-size: 12px;
     font-weight: 600;
     text-transform: uppercase;
     border: none;
+    border-radius: 5px;
+    cursor: pointer;
   }
 }
